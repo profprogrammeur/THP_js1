@@ -1,5 +1,5 @@
 let num = prompt("De quel nombre veux-tu calculer la factorielle ?");
-function facto(n){
+function factorielle(n){
   let result = 1;
   for (let i=1; i<=n
     ; i++) {
@@ -8,4 +8,4 @@ function facto(n){
   }
   return result
 }
-console.log("resultat : " + facto(num))
+console.log("resultat : " + factorielle(num))

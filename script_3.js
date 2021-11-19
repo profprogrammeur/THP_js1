@@ -1,11 +1,25 @@
-let num = prompt("Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?");
-function pyramid(n) {
-  let result = 1;
-  for (let i = 1; i <= n
-    ; i++) {
-    result = result * i
-    console.log("#")
+let nb = prompt("Combien d'étages veux-tu ?", 5);
+
+function pyramid(nb) {
+  let res = "";
+  let i = 1;
+  let j = 0;
+
+  while (i <= nb) {
+    j = 0;
+    while (j < nb) {
+      if (j < nb - i)
+        res += " ";
+      else
+        res += "#";
+      j++;
+    }
+    res += "\n";
+    i++;
   }
-  return result
+  return res;
 }
-console.log("resultat : " + pyramid(num))
+
+let res = pyramid(nb);
+
+console.log(res);
